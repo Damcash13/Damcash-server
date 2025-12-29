@@ -22,9 +22,6 @@ app.post("/move", (req, res) => {
   });
 });
 
-git add server.js
-git commit -m "return Option A move"
-git push
 
 
 
