@@ -13,6 +13,16 @@ app.get("/", (req, res) => {
 
 // (Plus tard : app.post("/move", ...))
 
+
+app.post("/move", (req, res) => {
+  const { board, turn, difficulty } = req.body;
+
+  res.json({
+    ok: true,
+    message: "Damcash AI endpoint ready ♟️",
+    received: { turn, difficulty }
+  });
+});
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
   console.log("Server running on port", PORT);
